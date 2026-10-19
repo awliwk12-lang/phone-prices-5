@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1226">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ارشیا">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon.png">
+<title>لیست قیمت موبایل ارشیا</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:#070b16;color:#e9edf7;font-family:Vazirmatn,Tahoma,sans-serif;padding:calc(env(safe-area-inset-top,0px) + 12px) 12px 24px;-webkit-text-size-adjust:100%}
+.tools{max-width:440px;margin:0 auto 12px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tools button{font:inherit;border:0;border-radius:10px;padding:8px 12px;font-size:13px;background:#1a2342;color:#e9edf7;cursor:pointer;white-space:nowrap}
+.tabs button.on{background:#f5c451;color:#14213d;font-weight:800}
+.tools button.gold{background:#f5c451;color:#14213d;font-weight:800}
+.btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.pct{display:flex;align-items:center;gap:6px;font-size:13px;background:#1a2342;border-radius:10px;padding:4px 10px}
+.pct input{width:60px;font:inherit;font-size:14px;padding:4px;border:1px solid #ffffff30;border-radius:6px;background:transparent;color:inherit;direction:ltr;text-align:center}
+#note{margin:8px 2px 0;font-size:12px;color:#9aa5c6;line-height:1.8}
+.story{--u:4px;--ac:#9ec5fe;--nf:13px;--pf:14px;position:relative;width:min(100%,440px);margin:0 auto;aspect-ratio:9/16;display:flex;flex-direction:column;overflow:hidden;border-radius:calc(var(--u)*4);padding:calc(var(--u)*5);color:#e9edf7;background:radial-gradient(120% 55% at 92% -5%,rgba(245,196,81,.22),transparent 60%),radial-gradient(90% 45% at 0% 105%,rgba(158,197,254,.14),transparent 60%),linear-gradient(170deg,#0d1530,#080c1b)}
+.hd{display:flex;align-items:center;gap:calc(var(--u)*3.5);flex:none}
+.logo{width:calc(var(--u)*15);height:calc(var(--u)*15);border-radius:50%;background:#fff;object-fit:cover;flex:none;box-shadow:0 0 0 calc(var(--u)*.7) rgba(245,196,81,.6)}
+.ht{flex:1;min-width:0}
+.ht h1{margin:0;font-size:calc(var(--u)*6.4);font-weight:800;color:#f5c451;line-height:1.25}
+.ht .dt{font-size:calc(var(--u)*3.3);color:#b7c0dc;margin-top:calc(var(--u)*.6)}
+.bt{flex:none;margin:calc(var(--u)*3.5) 0 calc(var(--u)*2);display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*2)}
+.bt h2{margin:0;font-size:calc(var(--u)*6);font-weight:800;color:#0b1226;background:var(--ac);padding:calc(var(--u)*1) calc(var(--u)*4.5);border-radius:999px;line-height:1.4;outline:0}
+.bt small{font-size:calc(var(--u)*2.8);color:#8f9bbd}
+.list{flex:1;min-height:0;display:grid;grid-auto-flow:column;column-gap:calc(var(--u)*3);align-content:start}
+.row{display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*1.5);padding:0 calc(var(--u)*1.5);border-bottom:1px solid rgba(255,255,255,.08);overflow:hidden}
+.row:nth-child(odd){background:rgba(255,255,255,.035)}
+.row .m{flex:1;min-width:0;font-size:var(--nf);line-height:1.22;color:#e9edf7;outline:0}
+.row .p{flex:none;font-size:var(--pf);font-weight:800;color:var(--ac);direction:ltr;text-align:left;white-space:pre-line;line-height:1.15;outline:0}
+.row .p.rg{font-size:calc(var(--pf)*.82)}
+.row .p[contenteditable="true"]{white-space:nowrap;border-bottom:1px dashed rgba(255,255,255,.4)}
+.ft{flex:none;margin-top:calc(var(--u)*2.5);padding-top:calc(var(--u)*2.5);border-top:1px solid rgba(255,255,255,.12);font-size:calc(var(--u)*2.9);color:#aeb8d6;text-align:center;line-height:1.7}
+.fe{outline:0;min-height:1em}
+.fe:focus{background:rgba(255,255,255,.1)}
+.fe.ig{direction:ltr}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 28px);transform:translateX(-50%);background:rgba(0,0,0,.82);color:#fff;font-size:13px;line-height:1.7;padding:10px 16px;border-radius:12px;text-align:center;max-width:90vw;display:none;z-index:9}
+body.shot{padding:0;overflow:hidden}
+body.shot .tools{display:none}
+body.shot .story{width:100vw;max-width:none;height:100vh;height:100dvh;aspect-ratio:auto;border-radius:0;padding-top:calc(var(--u)*5 + env(safe-area-inset-top,0px));padding-bottom:calc(var(--u)*5 + env(safe-area-inset-bottom,0px))}
+body.shot .row,body.shot .ft{pointer-events:none}
+</style>
+</head>
+<body>
+<div class="tools" id="tools">
+  <div class="tabs" id="tabs"></div>
+  <div class="btns"><label class="pct">درصد سود <input id="pct" type="number" inputmode="decimal" step="0.5" min="0"> ٪</label><button id="mode"></button></div>
+  <div class="btns"><button id="addr">+ ردیف جدید</button><button id="addb">+ برند جدید</button><button id="delb">حذف این برند</button></div>
+  <div class="btns"><button id="shot" class="gold">حالت اسکرین‌شات</button><button id="reset">بازگشت به نمونه</button></div>
+  <p id="note"></p>
+</div>
+<main class="story" id="story">
+  <div class="hd"><img class="logo" id="logo" src="logo.png" alt="ارشیا"><div class="ht"><h1>موبایل ارشیا</h1><div class="dt" id="date"></div></div></div>
+  <div class="bt" id="bt"></div>
+  <div class="list" id="list"></div>
+  <div class="ft">
+    <div class="fe" id="f1" contenteditable="true">📞 ۰۹۱۷۸۰۹۰۸۰۶ &nbsp;|&nbsp; ۰۹۰۵۷۱۱۰۰۸۴</div>
+    <div class="fe" id="f2" contenteditable="true">📍 کمربندی اکبراباد، شهرک جوادیه، خیابان محمد رسول الله، جنب درمانگاه</div>
+    <div class="fe ig" id="f3" contenteditable="true">📷 mobile.arshiia</div>
+  </div>
+</main>
+<div class="toast" id="toast"></div>
+<script>
+var KEY="arshia-prices-v5";
+var DEFAULT=[
+ {n:"سامسونگ",c:"#9ec5fe",r:[["S26 Ultra 12/256 ویتنام","244000"],["S25 FE 8/256 ویتنام/شرکتی","220000"],["A57 12/256 ویتنام","160000"],["A57 8/256 ویتنام","149500"],["A56 8/128 ویتنام مشکی","109500"],["A37 12/256 ویتنام مشکی","114000"],["A37 8/256 ویتنام","107000-106500"],["A37 8/128 ویتنام مشکی","97000"],["A36 8/256 ویتنام","99000-98500"],["A36 8/128 5G ویتنام مشکی","92500"],["A35 8/256 5G ویتنام","98000"],["A35 8/128 5G ویتنام","88000"],["A27 6/128 5G ویتنام آبی","80200"],["A26 8/256 5G ویتنام سفید","94000"],["A26 6/128 5G ویتنام","71500"],["A25 6/128 5G ویتنام","65000"],["A17 8/256 ویتنام","88000-87500"],["A17 6/128 ویتنام","68500"],["A17 4/128 ویتنام","56200"],["A16 8/256 ویتنام","82000"],["A16 6/128 ویتنام","64000"],["A16 4/128 ویتنام","54000"],["A07 6/128","53500"],["A07 4/128","47000"],["A07 4/64","42000-41500"]]},
+ {n:"شیائومی",c:"#ffb066",r:[["Mi 15T 12/512 گلوبال","225000"],["Note15 8/256 گلوبال","91500"],["Note14s 8/256 گلوبال","89500"],["Note14 4G 8/256 گلوبال","87500"],["Redmi 15 8/256 گلوبال","72000-71500"],["Redmi 15c 8/256 گلوبال","67000-66500"],["Redmi 15c 4/128 گلوبال","61000"],["Redmi A5 4/128 گلوبال","46500"],["Redmi A5 3/64 گلوبال","42000"],["Redmi A3 Pro 4/128 گلوبال","45000"],["POCO M7 8/256 گلوبال آبی","78000"],["POCO C85 8/256 گلوبال","67000-66500"],["POCO C71 4/128","46200-46000"],["POCO C71 3/64","42500"]]},
+ {n:"آیفون",c:"#ffc2d1",r:[["18 Pro Max 512 ZA NOT","515000"],["18 Pro Max 256 ZA NOT","425000-435000"],["18 Pro Max 256 ZA ACT","425000-418000"],["18 Pro 256 ZA NOT","383000"],["18 Pro 256 ZA ACT","370000"],["17 Normal 256 CH NOT","251000-248000"]]},
+ {n:"آنر",c:"#f2d16b",r:[["X9C 12/256 نارنجی","117000"],["X7D 8/256 + بیمه","84000"],["X6B 6/128 کارتن کوچک","66000"]]},
+ {n:"ریلمی",c:"#ff7ad9",r:[["Realme 12+ 8/256","70500"],["C75 8/256","64000"],["C71 8/256","60000"],["C71 6/128","54000"],["Note50 4/128","40500"]]},
+ {n:"نوکیا",c:"#d9dde3",r:[["Nokia 106","4200"],["Nokia 105","3900"]]},
+ {n:"ارود",c:"#8fd3ff",r:[["Orod F200","6500"],["Orod F240","6700"],["Orod F250 Pro","4600"],["Orod 150 Lite","3000"],["Orod 130","3400"]]},
+ {n:"تی‌سی‌اچ",c:"#c8f27a",r:[["NOVA","4400"],["ARC","3800"],["LIME","3400"],["OnePro 8/128","44000"],["OnePro 6/128","39500"],["Neo 4/64","34000"],["One 4/64","36000"],["OneLite 4/128","37000"],["OneLite 4/64","35000"]]},
+ {n:"تبلت",c:"#c9b6ff",r:[["Samsung A9 Plus 8/128 5G","99500"],["Samsung A9 8/128 4G","71000"],["Samsung A9 4/64 4G","58000"],["Samsung A11 8/128 4G","72000"],["Samsung A11 4/64 4G","59500"],["Poco Pad X1 8/512","88000"],["Poco Pad M1 8/256","77000"],["Poco Pad 8/256","76000"]]},
+ {n:"اکسسوری",c:"#a9e3a0",r:[["آداپتور داریا 66W","2200"],["آداپتور آتر 35.2W","1700"],["آداپتور 20W اصلی/بدون","4500"],["آداپتور 40W اصلی/بدون","10500"],["آداپتور 45W","30000"],["تبدیل 3 به 2 آیکک Timer 3b2","950"],["تبدیل 3 به 2 رازان Led","350"],["تبدیل 3 به 2 رازان Sade","180"],["اسپیکر هارمن/کاردن Aura5","58000"]]},
+ {n:"سایر",c:"#ffe08a",r:[["Daria Bond2 12/512","82000"],["MOBO K1 4/128","37000"],["RedTone E20 4/64","32000"]]}
+];
+var data,cur=0,edit=false,pct=7,shot=false;
+function toEn(t){return String(t||"").replace(/[۰-۹]/g,function(d){return "۰۱۲۳۴۵۶۷۸۹".indexOf(d)}).replace(/[٠-٩]/g,function(d){return "٠١٢٣٤٥٦٧٨٩".indexOf(d)}).trim()}
+function rnd(v){var st=v>=10000?500:v>=1000?50:10;return Math.round(v/st)*st}
+function retail(t){t=toEn(t);if(!/^\d+(-\d+)?$/.test(t))return t;return t.split("-").map(function(x){return rnd(parseInt(x,10)*(1+pct/100))}).join("-")}
+function fmt(v){return v.split("-").map(function(x){return parseInt(x,10).toLocaleString("en-US")}).join("\n")}
+try{data=JSON.parse(localStorage.getItem(KEY)||"null")}catch(e){data=null}
+if(!data||!data.length)data=JSON.parse(JSON.stringify(DEFAULT));
+try{var pv=localStorage.getItem("arshia-pct-v1");if(pv!==null&&pv!==""&&!isNaN(parseFloat(pv)))pct=parseFloat(pv)}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data))}catch(e){}}
+
+function setDate(){
+  var el=document.getElementById("date"),s;
+  try{s=new Intl.DateTimeFormat("fa-IR-u-ca-persian",{weekday:"long",day:"numeric",month:"long",year:"numeric",timeZone:"Asia/Tehran"}).format(new Date())}
+  catch(e){s=new Date().toLocaleDateString("fa-IR")}
+  if(el.textContent!==s)el.textContent=s;
+}
+
+function fit(){
+  var st=document.getElementById("story"),W=st.clientWidth;if(!W)return;
+  var u=W/100;st.style.setProperty("--u",u+"px");
+  var list=document.getElementById("list"),n=data[cur].r.length,availH=list.clientHeight;
+  if(!n||!availH)return;
+  var cols,per,rowH;
+  for(cols=1;cols<=3;cols++){per=Math.ceil(n/cols);rowH=Math.min(availH/per,u*13);if(rowH>=u*8.2||cols==3)break}
+  list.style.gridTemplateRows="repeat("+per+","+rowH+"px)";
+  list.style.gridTemplateColumns="repeat("+cols+",minmax(0,1fr))";
+  var nf=Math.min(rowH*0.38,u*(cols==1?4.6:3.5));
+  st.style.setProperty("--nf",nf+"px");
+  st.style.setProperty("--pf",(nf*1.1)+"px");
+}
+
+function render(){
+  if(cur>=data.length)cur=data.length-1;
+  var t=document.getElementById("tabs");t.innerHTML="";
+  data.forEach(function(b,i){
+    var x=document.createElement("button");x.textContent=b.n;if(i==cur)x.className="on";
+    x.onclick=function(){cur=i;render()};t.appendChild(x)});
+  document.getElementById("mode").textContent=edit?"نمایش قیمت فروش":"ویرایش قیمت عمده";
+  document.getElementById("note").textContent=edit
+    ?"حالت ویرایش: قیمت‌های عمده را اینجا وارد کن. قیمت فروش (با "+pct+"٪ سود) در حالت نمایش دیده می‌شود. برای حذف یک ردیف، اسم مدل را پاک کن."
+    :"در حال نمایش قیمت فروش (قیمت عمده + "+pct+"٪ سود). برای عوض کردن قیمت، «ویرایش قیمت عمده» را بزن.";
+  var b=data[cur],st=document.getElementById("story");
+  st.style.setProperty("--ac",b.c);
+  var bt=document.getElementById("bt");bt.innerHTML="";
+  var h=document.createElement("h2");h.textContent=b.n;h.contentEditable=shot?"false":"true";
+  h.addEventListener("input",function(){b.n=h.textContent;save()});
+  h.addEventListener("blur",function(){if(!shot)render()});
+  var sm=document.createElement("small");sm.textContent="قیمت‌ها به هزار تومان";
+  bt.appendChild(h);bt.appendChild(sm);
+  var list=document.getElementById("list");list.innerHTML="";
+  b.r.forEach(function(r){
+    var row=document.createElement("div");row.className="row";
+    var m=document.createElement("span");m.className="m";m.textContent=r[0];m.contentEditable=shot?"false":"true";
+    m.addEventListener("input",function(){r[0]=m.textContent;save()});
+    m.addEventListener("blur",function(){
+      var i=b.r.indexOf(r);
+      if(i>-1&&!r[0].trim()){b.r.splice(i,1);save();render()}});
+    var p=document.createElement("span");p.className="p";
+    if(edit){
+      p.textContent=r[1];p.contentEditable="true";
+      p.addEventListener("input",function(){r[1]=p.textContent;save()});
+    }else{
+      var v=retail(r[1]),isn=/^\d+(-\d+)?$/.test(v);
+      p.textContent=isn?fmt(v):v;
+      if(isn&&v.indexOf("-")>0)p.className="p rg";
+    }
+    row.appendChild(m);row.appendChild(p);list.appendChild(row)});
+  fit();
+}
+
+function toast(msg){
+  var t=document.getElementById("toast");t.textContent=msg;t.style.display="block";
+  clearTimeout(toast.k);toast.k=setTimeout(function(){t.style.display="none"},4500);
+}
+function setShot(v){
+  shot=v;edit=false;
+  document.body.classList.toggle("shot",v);
+  render();
+  setTimeout(fit,60);setTimeout(fit,300);
+  if(v)toast("آماده اسکرین‌شات. برای برند بعدی روی اسم برند بزن. برای خروج دو بار پشت‌سرهم روی لوگو بزن.");
+  else document.getElementById("toast").style.display="none";
+}
+
+var pi=document.getElementById("pct");pi.value=pct;
+pi.oninput=function(){
+  var v=parseFloat(toEn(pi.value));pct=isNaN(v)||v<0?0:v;
+  try{localStorage.setItem("arshia-pct-v1",String(pct))}catch(e){}
+  render()};
+document.getElementById("mode").onclick=function(){edit=!edit;render()};
+document.getElementById("addr").onclick=function(){data[cur].r.push(["مدل جدید","0"]);save();edit=true;render()};
+document.getElementById("addb").onclick=function(){
+  var n=prompt("اسم برند جدید؟");if(!n||!n.trim())return;
+  data.push({n:n.trim(),c:"#ffe08a",r:[["مدل جدید","0"]]});cur=data.length-1;save();edit=true;render()};
+document.getElementById("delb").onclick=function(){
+  if(data.length>1&&confirm("برند «"+data[cur].n+"» حذف شود؟")){data.splice(cur,1);cur=0;save();render()}};
+document.getElementById("shot").onclick=function(){setShot(true)};
+document.getElementById("reset").onclick=function(){
+  if(confirm("همه قیمت‌ها به لیست نمونه برگردد؟")){data=JSON.parse(JSON.stringify(DEFAULT));cur=0;save();render()}};
+
+var lastTap=0;
+document.getElementById("logo").addEventListener("click",function(){
+  var now=Date.now();if(shot&&now-lastTap<600){setShot(false)}lastTap=now});
+document.getElementById("bt").addEventListener("click",function(){
+  if(shot){cur=(cur+1)%data.length;render()}});
+
+["f1","f2","f3"].forEach(function(id){
+  var el=document.getElementById(id),k="arshia-v2-"+id;
+  try{var v=localStorage.getItem(k);if(v)el.textContent=v}catch(e){}
+  el.addEventListener("input",function(){try{localStorage.setItem(k,el.textContent)}catch(e){}})});
+
+window.addEventListener("resize",fit);
+window.addEventListener("orientationchange",function(){setTimeout(fit,200)});
+document.addEventListener("visibilitychange",function(){if(!document.hidden){setDate();fit()}});
+window.addEventListener("pageshow",function(){setDate();fit()});
+window.addEventListener("focus",setDate);
+setInterval(setDate,60000);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+setDate();render();
+</script>
+</body>
+</html>
